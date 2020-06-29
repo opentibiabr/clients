@@ -58,6 +58,7 @@ func downloadJSON(URL, destination string) ([]byte, error) {
 		return nil, err
 	}
 
+	log.Println(string(rawBytes))
 	var jsonAbs string
 	if destination == "" {
 		jsonFile := toPath(URL)
